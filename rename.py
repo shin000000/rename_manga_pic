@@ -60,8 +60,8 @@ offset = 0
 
 for folder in folder_list:
     cwd =  ori_cwd + '\\' + folder + '\\'
-    filenames = os.listdir(cwd)
-    len_f = len(filenames)
+    filelist = os.listdir(cwd)
+    len_f = len(filelist)
     try:
         folder_list.sort(key=lambda f: int(re.sub('\D', '', f)))
     except:
@@ -69,13 +69,13 @@ for folder in folder_list:
 
     # check the file order
     print(f"The original file order in the folder [{folder}] be:")
-    for filename in filenames:
-        print(filename)
+    for file in filelist:
+        print(file)
 
     # loop through all files in subdirectory.
     for num in range(0, len_f):
         new_num = num + offset
-        file = filenames[num]
+        file = filelist[num]
         filename = os.path.splitext(file)[0]
         ex = os.path.splitext(file)[1]
         # skip all files whose extensions not in extension list.
