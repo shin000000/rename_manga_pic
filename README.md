@@ -1,13 +1,37 @@
 # rename_manga_pic
 
-我有时候会想要把单话漫画的图片合并到同一个文件夹。
+<h1>description</h1>
 
-这个脚本可以用来做这件事情！
+this little thing does things like below:
+---------------
+Suppose the current folder be:
+├── rename.py（this script）
+└── folder1
+    ├── 1.jpg
+    └── 2.jpg
+└── folder2
+    ├── 1.jpg
+    └── 2.jpg
+└──...
+---------------
+After running the script:
+├── rename.py（this scripts）
+├── 00001.jpg
+├── 00002.jpg
+├── 00003.jpg
+├── 00004.jpg
+├── ...
+---------------
 
-它是按照文件名中的数字排序的（这意味着它将忽视前缀的字符串）, 所以如果你的文件名里面没有数字，它可以会放弃对你的文件进行排序。
+<h1>Installation </h1>
 
-如果你想要用自然排序的话可以把脚本中的sorted改为os_sorted（但是你需要先安装natsort）。
+just run the script, you don't need to install anything except python itself.
+【WARNING】: This program will rename every file with jpg/png
+ extension in the subdirectories and move them to currentdirectory. So make sure you 
+ want to do the merge and rename with every picture in every subdirectory.
 
-我在rename.py的一开始加了长长的warning文本因为我不小心运行了这个脚本导致桌面上的所有图片被标上序号(ㄒoㄒ)。
-
-感谢阅读！
+<h1>Afterwards</h1>
+  
+I know it does really trivial task but... 
+I'm just trying to write something in python and put it on github!
+This is the first thing I put on github and... I feel happy!
